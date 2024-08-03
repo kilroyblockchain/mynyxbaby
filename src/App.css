@@ -1,0 +1,408 @@
+/* App.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Arial', sans-serif;
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.tenant {
+  color: white;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+form {
+  background-color: white;
+  color: #000;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 480px;
+  margin: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.file-baby-background {
+  background-image: url('File_Baby_Background.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: #61dafb;
+}
+
+.tooltip-icon {
+  float: left;
+}
+
+hr {
+  margin-top: 40px;
+  color: white;
+  width: 100%;
+}
+
+.generator {
+  max-width: 900px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.generator h1 {
+  margin-bottom: 0px;
+}
+
+input[type="text"],
+input[type="file"] {
+  width: calc(100% - 20px);
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[class="file-search"] {
+  max-width: 200px;
+}
+
+button,
+input[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.filter-filenames {
+  justify-self: center;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+button.msbutton {
+  background-color: transparent;
+}
+
+button.msbutton:hover {
+  opacity: 90%;
+  background-color: transparent;
+}
+
+input[type="file"]::file-selector-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-right: 4px;
+}
+
+.form-item {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-container {
+  margin-top: 30px;
+  width: 480px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-header {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.text-description {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.user {
+  color: blue;
+}
+
+.shareSelected button {
+  margin: 20px;
+}
+
+.chat {
+  font-size: 1em;
+  margin: 20px;
+}
+
+.chatFB {
+  width: 500px;
+}
+
+.inspectFile {
+  min-width: 600px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #61dafb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.footer {
+  width: 500px;
+  font-size: .5em;
+  background-color: #61dafb;
+}
+
+.footnote {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.responsive {
+  display: block;
+  width: auto;
+  margin: 20px;
+}
+
+.generated {
+  width: auto;
+  display: block;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  justify-self: center;
+  margin-bottom: 20px;
+}
+
+.signed {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.signed img {
+  display: flex;
+  max-width: 100%;
+  height: auto;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.button {
+  margin-top: 10px;
+}
+
+.retrievedmanifest label {
+  display: none;
+}
+
+.manifestUpload form {
+  background-color: #ffffff;
+  border-style: none;
+  border-width: 10px;
+  border-color: white;
+  color: darkgrey;
+  font-weight: bold;
+}
+
+.manifestUpload form input {
+  background-color: white;
+  color: #666666;
+}
+
+.audio-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.audio-controls button {
+  margin: 0 10px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.audio-controls button:hover {
+  background-color: #0056b3;
+}
+
+.drag-drop-media-player .drop-zone {
+  cursor: pointer;
+}
+
+.drop-zone input[type="file"] {
+  display: none;
+}
+
+.inspectFile {
+  text-align: center;
+}
+
+.error {
+  color: red;
+}
+
+.flashing-text {
+  color: yellow;
+  font-size: 24px;
+  animation: flash 1s linear infinite;
+}
+
+.promptLibrary img {
+  margin: 50px;
+  display: block;
+  max-width: 1000px;
+}
+
+@keyframes flash {
+  50% { opacity: 0; }
+}
+
+@media screen and (min-width: 601px) {
+  .promptLibrary img {
+    width: 500px;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    max-width: 600px;
+  }
+  .promptLibrary img {
+    width: 350px;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .App-header img {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  form, form textarea {
+    width: 300px;
+  }
+  input[type="text"].file-search {
+    width: 50px;
+  }
+  .form-container {
+    width: 300px;
+  }
+  .manifestUpload h3 {
+    font-size: 14px;
+  }
+  .pagination-controls form {
+    border-radius: 4px;
+    min-width: 80px;
+    width: 300px;
+  }
+  .file-search {
+    display: block;
+    width: 10px;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.file-baby-home {
+  background-color: #61dafb; /* Blue background */
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}

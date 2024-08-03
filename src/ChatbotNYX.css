@@ -1,0 +1,344 @@
+/* ChatbotNYX.css */
+
+body, html {
+    background: url('./img/Nyx Goddess of Night1.png') no-repeat center center fixed; /* Ensure the background image fills the page */
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.chat-container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 1000;
+    border: 1px solid #4859a6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin-right: 20px;
+    max-width: 400px;
+    max-height: 600px;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    background: none;
+    font-family: Arial, sans-serif; /* Ensure font is consistent */
+}
+
+h3 {
+    text-align: center;
+}
+
+.response-container {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.copy-link-container {
+    margin-bottom: 10px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.copy-link-container p {
+    margin: 0;
+}
+
+.copy-link-container button {
+    margin-top: 5px;
+}
+
+.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.success-message {
+    color: green;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+button.last {
+    margin-right: 10px;
+}
+
+.chat-toggle-button {
+    width: 100%;
+    padding: 8px;
+    margin: 0;
+    font-weight: bold;
+    background: linear-gradient(135deg, #24b7a5, #4859a6);
+    background-size: 200% 200%;
+    animation: gradientAnimation 4s ease infinite;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    border-radius: 8px 8px 0 0;
+    box-sizing: border-box;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.chat-popup {
+    display: flex;
+    color: black;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 10px;
+    position: relative;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 0 0 8px 8px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-right: 10px; /* Added padding */
+}
+
+@keyframes flashGreen {
+    0% { background-color: #007bff; }
+    50% { background-color: #00ff00; }
+    100% { background-color: #007bff; }
+}
+
+.flash-green {
+    animation: flashGreen 1s infinite;
+}
+.loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(56, 54, 54, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 1000;
+    display: none;
+}
+
+.loading-overlay.visible {
+    display: flex;
+}
+
+.loading-indicator {
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+    background-color: transparent;
+    animation: blinker 2s linear infinite;
+    margin-bottom: 65px;
+}
+
+.chatbox-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.chatbox {
+    flex-grow: 1;
+    overflow-y: auto;
+    font-size: 12px;
+}
+
+.generated-content {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.save-button {
+    margin: 10px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.save-button:hover {
+    background-color: #0056b3;
+}
+
+.thumbnail-container {
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.file-icon {
+    font-size: 24px;
+    color: #555;
+}
+
+.file-thumbnails img.thumbnail {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+}
+
+.error {
+    color: red;
+    padding: 10px;
+}
+
+.response-container {
+    flex-grow: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    color: black; /* Set font color to black */
+    padding: 5px;
+    background-color: white;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.response-container::-webkit-scrollbar {
+    width: 12px;
+}
+
+.response-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.response-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.response-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.response-container p {
+    color: black;
+}
+
+input[type="text"], textarea {
+    padding: 10px;
+    justify-self: left;
+    width: 90%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: black; /* Set font color to black */
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px; /* Added padding */
+}
+
+button[type="submit"], button[title="Clear Chat"], button[title="Copy Chat"] {
+    background-color: #4859a6;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 5px;
+    box-sizing: border-box;
+}
+
+.chat {
+    margin: 10px 0;
+    background-color: white;
+    padding: 10px;
+    border-radius: 4px;
+    color: black; /* Set font color to black */
+}
+
+.user {
+    background-color: #fafffe;
+    padding: 5px;
+    border-radius: 4px;
+    color: black; /* Set font color to black */
+}
+
+.filebaby {
+    background-color: #fafffe;
+    padding: 5px;
+    border-radius: 4px;
+    color: black; /* Set font color to black */
+}
+
+.filebaby p {
+    margin: 0;
+    padding: 5px 0;
+}
+
+.thumbnail {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    margin: 5px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.chat-title-bar .nyx {
+    font-family: 'VTCMarsha', sans-serif;
+    font-size: 30px;
+    background-color: transparent;
+    color: black; /* Set font color to black */
+    padding: 10px;
+    cursor: move;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+}
+
+.generated-page {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.generated-page p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: black; /* Set font color to black */
+}
+
+/* Media queries for responsive design */
+@media (min-width: 768px) {
+    .chat-container.expanded {
+        width: 360px;
+        max-width: 400px;
+    }
+    .loading-indicator {
+        font-size: 1.2em;
+    }
+    .chat-popup {
+        width: 360px;
+    }
+}

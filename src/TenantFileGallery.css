@@ -1,0 +1,301 @@
+/* Base styles */
+.tenant-input-container {
+  display: none;
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.tenant-input-container input[type="text"],
+.tenant-input-container button {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.tenant-input-container input {
+  border: 1px solid #ced4da;
+  color:#333;
+  padding:20px;
+  background-color: f8f9fa;
+  border-radius: 4px;
+  max-width: 90%;
+  flex: 1;
+  font-size: 15px;
+  text-align: center;
+}
+
+.tenant-input-container button {
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tenant-input-container button:hover,
+.tenant-input-container button:focus {
+  background-color: #0056b3;
+}
+.filter-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.filter-container input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  min-width:200px;
+  max-width: 300px; /* Adjust as needed */
+  transition: border-color 0.3s ease-in-out;
+}
+
+.filter-container input[type="text"]:focus {
+  border-color: #007bff; /* Highlight input border when focused */
+  outline: none;
+}
+
+.items-per-page-selector {
+  font-size: .5em;
+  float:left;
+  width: 200px;
+}
+.filter-container {
+}
+.error {
+  color: #dc3545;
+  text-align: center;
+}
+
+.file-gallery {
+  display:flex;
+  min-width:950px;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  padding: 16px;
+}
+
+.file-item {
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 8px;
+  width: 200px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: #ced4da;
+  font-size: 12px;
+}
+.file-name {
+  display: block; /* Block display to allow width specification */
+  white-space: normal; /* Allow whitespace to behave normally */
+  overflow-wrap: break-word; /* Allow long words to break and wrap to the next line */
+  word-wrap: break-word; /* Legacy property for older browsers */
+  word-break: break-word; /* Ensure the break happens cleanly at word boundaries */
+  width: 100%; /* Use the full width of the parent container */
+  margin: 0 auto; /* Center the filename if desired */
+  font-size: 12px; /* Adjust font size as necessary */
+  line-height: 1.2; /* Adjust line height for better readability */
+  padding: 4px 0; /* Add some padding to the top and bottom */
+}
+
+.file-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 8px;
+}
+.file-search {
+  max-width:400px;
+}
+/* Ensure images are responsive */
+img.responsive {
+  max-width: 100%; /* Limit image width to the width of its container */
+  height: auto; /* Maintain the aspect ratio */
+}
+
+/* Pagination Controls */
+.pagination-controls {
+  display: flex;
+  margin-top: 20px;
+  max-width:100%;
+  height:50px;
+  margin-bottom: 20px;
+}
+.shareSelected {
+  display: block;
+}
+
+.pagination-controls button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  width: 90px;
+  cursor: pointer;
+
+}
+
+.pagination-controls button:hover {
+  background-color: #0056b3;
+}
+
+.pagination-controls button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+/* Adjust the tenant input container for smaller screens */
+.tenant-input-container {
+  color:black;
+  font-size: 16px;
+  display: block;
+  background-color: transparent;
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+/* Responsive adjustments for the filter container and pagination controls */
+.filter-container {
+  margin-top: 30px;
+  padding: 20px;
+  background: #61dafb;
+  border-radius: 5px;
+  color: black;
+}
+
+@media screen and (max-width: 768px) {
+  .file-item {
+    width: calc(50% - 8px); /* Adjust file items for smaller screens */
+  }
+
+  .pagination-controls {
+    width:500px;
+  }
+
+
+  .file-name {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 90%; /* Adjust the width as necessary */
+    margin: 0 auto; /* Center the filename if desired */
+  }
+  .file-search {
+    width:50px;
+  }
+  .pagination-controls {
+    width:500px;
+  }
+}
+@media screen and (min-width: 401px) {
+  .file-search {
+    width: 400px; /* Specific width on larger screens */
+  }
+  .file-search-mobile {
+    display:none;
+  }
+  div.mobile-input-container {
+    display:none;
+  }
+}
+@media screen and (max-width: 400px) {
+  body {
+    max-width: 350px;
+  }
+
+  form {
+    max-width: 350px;
+  }
+
+  .file-item {
+    width: 30%; /* Full width for file items on very small screens */
+  }
+
+  .filter-container {
+    max-width: 400px;
+  }
+
+  .file-gallery {
+    display: flex;
+    min-width: 300px;
+    max-width: 400px;
+    flex-wrap: wrap;
+
+  }
+
+  .manifest-upload {
+    width: 300px;
+  }
+
+  .tenant-input-container {
+    color: black;
+    font-size: 16px;
+    width: 300px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: none;
+    box-sizing: border-box;
+  }
+  .mobile-input-container {
+    display: block;
+    max-width: 300px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+  }
+
+  /* Adjust the footer and any other elements for smaller screens */
+  .footer img.responsive {
+    max-width: 80%; /* Adjust the width of footer images on very small screens */
+    height: auto;
+  }
+  .mygallery {
+    margin-top:50px;
+  }
+
+  .files img {
+    width: 400px;
+  }
+
+  .file-search {
+    display: none;
+
+  }
+  .items-per-page-selector {
+    width:50px;
+    margin-left:22px;
+  }
+  .file-search-mobile {
+    display:block;
+    border:none;
+    max-width: 200px;
+    margin-left:20px;
+  }
+  .filter-container {
+    max-width:370px;
+    border-style: none;
+    align-self: center;
+    }
+  }
+
+
